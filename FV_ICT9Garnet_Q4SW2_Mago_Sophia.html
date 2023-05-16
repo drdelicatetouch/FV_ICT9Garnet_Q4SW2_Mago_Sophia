@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SW2</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<style type="text/css">
+		body{
+			background: url(https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80);
+			background-repeat: no-repeat;
+			background-size: 1367px;
+		}
+		.img-size{
+			width: 100px;
+		}
+		.img-center{
+			display: block;
+  			margin-left: auto;
+  			margin-right: auto;
+		}
+		*{
+			text-align: center;
+			font-family: 'Times New Roman';
+			color: black;
+		}
+		.container{
+			width: 650px;
+		}
+		
+	</style>
+</head>
+<body>
+	<br>
+	<img src="file:///C:/Users/Sophia/Downloads/kisspng-clock-horloge-murale-blanc-clip-art-illustration-c-5bac0d0ddd0404.5913069515380021899053.png" class="img-size img-center">
+	<h1 style="text-align: center;font-family: 'Times New Roman'; color: black; font-weight: bolder;">Time Converter</h1>
+	<div class="container">	
+		<table class="center">
+		 	<tr>
+		 		<th class="table-info">
+		 		<br>
+		 		Seconds
+		 		<br>
+		 		<br>
+		 		<p>
+		 			<input type="number" id="seconds">
+		 		</p>
+		 		<button class="btn btn-success btn-sm" onclick="SM()">Convert To Minutes</button>
+		 		<button class="btn btn-success btn-sm" onclick="SD()">Convert To Days</button>
+		 		<button class="btn btn-success btn-sm" onclick="SH()">Convert To Hours</button>
+		 		<br>
+		 		<br>
+		 		</th>
+		 		<th class="table-warning">
+		 		<br>
+		 		Minutes
+		 		<br>
+		 		<br>
+		 		<p>
+		 			<input type="number" id="minutes">
+		 		</p>
+		 		<button class="btn btn-danger btn-sm" onclick="MD()">Convert To Days</button>
+		 		<button class="btn btn-danger btn-sm" onclick="MS()">Convert To Seconds</button>
+		 		<button class="btn btn-danger btn-sm" onclick="MH()">Convert To Hours</button>
+		 		<br>
+		 		<br>
+		 		</th>
+		 	</tr>
+		</table>
+		<table class="center">
+			<tr>
+				<th class="table-warning">
+				<br>
+				Hours
+				<br>
+				<br>
+				<p>
+					<input type="number" id="hours">
+				</p>
+				<button class="btn btn-danger btn-sm" onclick="HD()">Convert To Days</button>
+		 		<button class="btn btn-danger btn-sm" onclick="HS()">Convert To Seconds</button>
+		 		<button class="btn btn-danger btn-sm" onclick="HM()">Convert To Minutes</button>
+				</th>
+				<th class="table-info">
+				<br>
+				Days
+				<br>
+				<br>
+				<p>
+					<input type="number" id="days">
+				</p>
+				<button class="btn btn-success btn-sm" onclick="DM()">Convert To Minutes</button>
+				<button class="btn btn-success btn-sm" onclick="DH()">Convert To Hours</button>
+				<button class="btn btn-success btn-sm" onclick="DS()">Convert To Seconds</button>
+				</th>
+			</tr>
+		</table>
+	</div>
+<script type="text/javascript">
+/*Seconds*/
+ let s;
+  function SM() {
+  	let s = parseInt(document.getElementById("seconds").value);
+  	alert(s / 60);
+  }
+  function SD() {
+  	let s = parseInt(document.getElementById("seconds").value);
+  	alert(s / 86400);
+  }
+    function SH() {
+  	let s = parseInt(document.getElementById("seconds").value);
+  	alert(s / 3600);
+  }
+/*Minutes*/
+  let m;
+   function MD() {
+   	let m = parseInt(document.getElementById("minutes").value);
+   	alert(m / 1440);
+   }
+   function MS() {
+   	let m = parseInt(document.getElementById("minutes").value);
+   	alert(m * 60);
+   }
+   function MH() {
+   	let m = parseInt(document.getElementById("minutes").value);
+   	alert(m / 60);
+   }
+/*Hours*/
+   let h;
+	function HD() {
+	  let h = parseInt(document.getElementById("hours").value);
+	  alert(h / 24);	
+	}
+	function HS() {
+	  let h = parseInt(document.getElementById("hours").value);
+	  alert(h * 3600);	
+	}
+	function HM() {
+	  let h = parseInt(document.getElementById("hours").value);
+	  alert(h * 60);
+	}
+/*Days*/
+    let d;
+    function DM() {
+       let d = parseInt(document.getElementById("days").value);
+       alert(d * 1440);
+    }
+    function DH() {
+       let d = parseInt(document.getElementById("days").value);
+       alert(d * 24);
+    }
+    function DS() {
+       let d = parseInt(document.getElementById("days").value);
+       alert(d * 86400);
+    }
+</script>
+</body>
+</html>
